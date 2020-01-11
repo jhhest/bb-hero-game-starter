@@ -11,8 +11,14 @@ const hero = {
 };
 
 // Game Logic functions.
-function rest() {
-  return null;
+
+// Person is a placeholder for the Hero object.
+function rest(person) {
+    if(person.health === 10){
+        window.alert("Your health is already at the value of 10");
+    }
+  person.health = 10;
+  return person;
 }
 function pickUpItem() {
   return null;
