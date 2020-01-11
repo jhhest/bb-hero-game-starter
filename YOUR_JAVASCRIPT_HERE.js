@@ -27,7 +27,8 @@ const weapon = { type: "dagger", damage: 2 }; // FIXME: Is this okey to do?
  * rest()
  */
 function rest(person) {
-  if (person.health === 10) {
+    healthValue = person.health
+  if (healthValue === 10) { // FIXME: changed person.health to healtValue to make code more readable. // Error: Error: global leak detected: healthValue
     window.alert("Your health is already at the value of 10");
   }
   person.health = 10;
