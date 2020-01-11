@@ -3,15 +3,17 @@
  */
 
 const hero = {
-  name: "Super hero Jan van Hest",
-  heroic: true,
-  inventory: [],
-  health: 10,
-  weapon: {
-    type: "Dagger",
-    damage: 2
-  }
+    name: "Super hero Jan van Hest",
+    heroic: true,
+    inventory: [],
+    health: 10,
+    weapon: {
+        type: "Dagger",
+        damage: 2
+    }
 };
+
+const weapon = { type: "dagger", damage: 2 }; // FIXME: Is this okey to do? 
 
 /**
  * Game Logic functions.
@@ -28,9 +30,7 @@ function rest(person) {
   if (person.health === 10) {
     window.alert("Your health is already at the value of 10");
   }
-  console.log("Rest(): Set healt to 10");
   person.health = 10;
-  console.log("Rest() -> Check if health is 10:", person.health);
   return person;
 }
 
@@ -39,7 +39,6 @@ function rest(person) {
  */
 function pickUpItem(person, weapon) {
   const weaponToPickup = weapon;
-
   person.inventory.push(weaponToPickup);
   return person;
 }
@@ -69,9 +68,7 @@ document.getElementById("inn").addEventListener("click", function() {
 
 // When the dagger is clicked it will add a weapon object to the inventory array with `type`: `dagger` and `damage`: 2
 document.getElementById("dagger").addEventListener("click", function() {
-  const weapon = { type: "dagger", damage: 2 };
-  hero.inventory.push(weapon);
-  // FIXME: pickUpItem(hero, weapon);
+  pickUpItem(hero, weapon);
 });
 
 document.getElementById("bag").addEventListener("click", function() {
