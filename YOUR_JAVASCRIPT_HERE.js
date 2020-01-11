@@ -104,24 +104,24 @@ function displayStats() {
  * generateStats()
  */
 
-function generateStats() {
-  const name = hero.name;
+function generateStats(person) {
+  const name = person.name; 
   const nameElement = document.createElement("li");
   nameElement.innerHTML = `Name: ${name}`;
 
-  const health = hero.health;
+  const health = person.health;
   const healthElement = document.createElement("li");
   healthElement.innerHTML = `Health: ${health}HP`;
 
-  const weaponType = hero.weapon.type;
+  const weaponType = person.weapon.type;
   const weaponTypeElement = document.createElement("li");
   weaponTypeElement.innerHTML = `Weapon: ${weaponType}`;
 
-  const weaponDamage = hero.weapon.damage;
+  const weaponDamage = person.weapon.damage;
   const weaponDamageElement = document.createElement("li");
   weaponDamageElement.innerHTML = `Weapon damage: ${weaponDamage}`;
 
-  const heroInventory = hero.inventory.map(item => item.type).join(", ");
+  const heroInventory = person.inventory.map(item => item.type).join(", ");
   const inventoryElement = document.createElement("li");
   inventoryElement.innerHTML = `Inventory: ${heroInventory}`;
 
@@ -141,8 +141,4 @@ TODO:- A player can choose their own name
 TODO:- Make it possible to fight enemies
 - Implement fighting an enemy. (how you do it is up to you!)
 - When an enemy or weapon gets clicked it gets deleted from the page
-
-
-
-
 */
