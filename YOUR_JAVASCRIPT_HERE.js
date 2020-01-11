@@ -6,8 +6,8 @@ const hero = {
   name: "Super hero Jan van Hest",
   heroic: true,
   inventory: [
-    { type: "sword", damage: 5 },
-    { type: "axe", damage: 10 }
+    // { type: "sword", damage: 5 },
+    // { type: "axe", damage: 10 }
   ],
   health: 10,
   weapon: {
@@ -28,9 +28,9 @@ const weapon = { type: "dagger", damage: 2 }; // FIXME: Is this okey to do?
  */
 
 function askName(person) {
-    const name = prompt("What is your name? ");
-    person.name = name;
-    return person;
+  const name = prompt("What is your name? ");
+  person.name = name;
+  return person;
 }
 
 askName(hero);
